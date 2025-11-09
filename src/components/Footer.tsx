@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="border-t border-border/50 py-12 bg-muted/30">
+    <footer className="border-t border-border/30 py-12 bg-muted/10">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border/50 text-center">
+        <div className="mt-8 pt-8 border-t border-border/30 text-center">
           <p className="text-sm text-muted-foreground">
             © 2025 Ocliq. All rights reserved.
           </p>

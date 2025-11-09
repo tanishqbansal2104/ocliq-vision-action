@@ -25,8 +25,10 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-32 bg-gradient-to-b from-background to-muted/30">
-      <div className="container mx-auto px-6">
+    <section className="py-32 bg-gradient-to-b from-background via-muted/20 to-background relative overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-ocliq-blue/5 rounded-full blur-3xl"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
             From Vision to Action, <span className="gradient-text">in Seconds</span>
@@ -48,7 +50,7 @@ const HowItWorks = () => {
                 <div className="hidden md:block absolute top-24 left-full w-12 h-0.5 bg-gradient-to-r from-ocliq-blue to-ocliq-violet opacity-30 -ml-6"></div>
               )}
 
-              <div className="glass rounded-3xl p-8 shadow-soft hover:shadow-glow transition-smooth hover:scale-105 h-full">
+              <div className="glass rounded-3xl p-8 shadow-soft hover:shadow-glow transition-smooth hover:scale-105 h-full border border-ocliq-blue/20">
                 {/* Step Number */}
                 <div className="text-6xl font-bold gradient-text mb-6 opacity-50">
                   {step.number}

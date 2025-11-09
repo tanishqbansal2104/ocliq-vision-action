@@ -29,9 +29,10 @@ const useCases = [
 
 const UseCases = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden bg-gradient-to-b from-background to-muted/10">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-ocliq-violet/10 rounded-full blur-3xl animate-glow"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-ocliq-violet/5 rounded-full blur-3xl animate-glow"></div>
+      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-ocliq-blue/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20 animate-fade-in">
@@ -52,7 +53,7 @@ const UseCases = () => {
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="glass rounded-3xl p-8 h-full shadow-soft hover:shadow-glow transition-smooth hover:scale-105">
+                <div className="glass rounded-3xl p-8 h-full shadow-soft hover:shadow-glow transition-smooth hover:scale-105 border border-ocliq-violet/20">
                   {/* Icon with Gradient Background */}
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${useCase.color} p-4 mb-6 group-hover:scale-110 transition-transform`}>
                     <Icon className="w-full h-full text-white" />

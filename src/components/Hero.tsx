@@ -1,20 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background"></div>
-      </div>
+      {/* Dark Background */}
+      <div className="absolute inset-0 bg-background"></div>
 
       {/* Animated Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-ocliq-blue/20 via-transparent to-ocliq-violet/20 animate-gradient-shift" style={{ backgroundSize: '200% 200%' }}></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-ocliq-blue/10 via-transparent to-ocliq-violet/10 animate-gradient-shift" style={{ backgroundSize: '200% 200%' }}></div>
+
+      {/* Radial Glow Effect */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-ocliq-violet/5 rounded-full blur-3xl animate-glow"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
@@ -31,7 +28,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
               size="lg" 
-              className="gradient-primary text-white hover:opacity-90 transition-smooth text-lg px-8 py-6 shadow-glow group"
+              className="gradient-primary text-white hover:opacity-90 transition-smooth text-lg px-8 py-6 shadow-glow group border-0"
             >
               Get Early Access
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -39,7 +36,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 py-6 glass hover:bg-white/80 transition-smooth"
+              className="text-lg px-8 py-6 border-ocliq-blue/30 hover:bg-ocliq-blue/10 transition-smooth"
             >
               Watch Demo
             </Button>

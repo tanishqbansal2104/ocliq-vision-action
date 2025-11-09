@@ -27,7 +27,8 @@ const Technology = () => {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background"></div>
+      <div className="absolute top-1/3 right-1/4 w-[700px] h-[700px] bg-ocliq-blue/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20 animate-fade-in">
@@ -67,7 +68,7 @@ const Technology = () => {
         </div>
 
         {/* Visual Diagram */}
-        <div className="glass rounded-3xl p-12 max-w-4xl mx-auto shadow-soft">
+        <div className="glass rounded-3xl p-12 max-w-4xl mx-auto shadow-soft border border-ocliq-violet/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-center space-y-2">
               <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-ocliq-blue to-ocliq-violet/50 flex items-center justify-center">
