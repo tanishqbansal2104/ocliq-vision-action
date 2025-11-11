@@ -3,14 +3,176 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ocliq — When Cameras Start Understanding</title>
+  <title>Ocliq — When Cameras Start Understanding.</title>
+  <meta name="description" content="Ocliq turns your cameras into intelligent assistants that send WhatsApp messages or calls based on custom workflows." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1 class="logo">Ocliq</h1>
-    <p class="tagline">When Cameras Start Understanding.</p>
-    <p class="coming-soon">Coming Soon</p>
-  </div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="inner wrap">
+      <div class="brand">
+        <div class="logo-mark">OQ</div>
+        <div>
+          <h1>Ocliq</h1>
+          <p>When Cameras Start Understanding.</p>
+        </div>
+      </div>
+
+      <nav class="primary">
+        <a href="#how">How</a>
+        <a href="#cases">Use cases</a>
+        <a href="#integrations">Integrations</a>
+        <a class="btn ghost" href="#demo">Try Demo</a>
+        <a class="btn primary" href="#contact">Book Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">AI • Vision • Action</div>
+        <h2>When Cameras Start Understanding.</h2>
+        <p class="lead">Ocliq turns your existing CCTV and IP cameras into intelligent agents that not only see — but act. Send WhatsApp alerts or make phone calls automatically when critical events happen.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#demo">Get Early Access</a>
+          <a class="btn ghost" href="#how">See How</a>
+        </div>
+        <div class="meta-features">
+          <div>No new hardware</div>
+          <div>Edge & Cloud</div>
+          <div>WhatsApp & Calls</div>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card workflow-preview">
+          <div class="title">Workflow Builder — Preview</div>
+          <div class="wf-flow">
+            <div class="wf-item">Camera: Counter-1</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-item">Event: Idle &gt; 2 min</div>
+            <div class="wf-arrow">→</div>
+            <div class="wf-item">Action: WhatsApp to Manager</div>
+          </div>
+          <div class="note">Create rules visually. Choose recipients, escalation, and call templates.</div>
+        </div>
+
+        <div class="card dual-card">
+          <div>
+            <div style="font-weight:800">Edge</div>
+            <div class="note">Run on NVR / Raspberry Pi — minimal latency.</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-weight:800">Cloud</div>
+            <div class="note">Scale processing and analytics.</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="wrap">
+    <h3 class="center">From Vision to Action, in Seconds</h3>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="num">1</div>
+        <h4>Connect Cameras</h4>
+        <p class="note">Works with any RTSP / ONVIF cameras or NVRs — no vendor lock-in.</p>
+      </div>
+      <div class="how-card">
+        <div class="num">2</div>
+        <h4>Build Workflows</h4>
+        <p class="note">Compose triggers, conditions, and actions visually — WhatsApp, call, email.</p>
+      </div>
+      <div class="how-card">
+        <div class="num">3</div>
+        <h4>Receive Alerts</h4>
+        <p class="note">Get instant messages or calls to the right person, with image/video evidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="cases" class="wrap">
+    <h3 class="center">Use Cases</h3>
+    <div class="usecases">
+      <div class="usecase"><h4>Restaurants</h4><p class="note">Detect idle counters, kitchen congestion, delayed orders.</p></div>
+      <div class="usecase"><h4>Retail</h4><p class="note">Spot unattended cashiers, suspicious behavior, or shrinkage.</p></div>
+      <div class="usecase"><h4>Schools</h4><p class="note">Monitor crowding, restricted zones, and after-hours motion.</p></div>
+      <div class="usecase"><h4>Homes</h4><p class="note">Alerts for intrusions, deliveries, or unexpected movement.</p></div>
+    </div>
+  </section>
+
+  <!-- Integrations -->
+  <section id="integrations" class="wrap">
+    <h3 class="center">Integrations</h3>
+    <div class="integrations">
+      <div class="integration">WhatsApp</div>
+      <div class="integration">Twilio Calls</div>
+      <div class="integration">Slack</div>
+      <div class="integration">Email</div>
+      <div class="integration">Webhook</div>
+    </div>
+    <p class="note center">Plug into the tools you already use.</p>
+  </section>
+
+  <!-- Demo Section -->
+  <section id="demo" class="wrap">
+    <h3 class="center">Interactive Demo — Simulate an Alert</h3>
+    <div class="demo-grid">
+      <div class="form-card">
+        <form id="demoForm">
+          <label>Event<select id="event"><option value="idle">Idle counter &gt; 2 min</option><option value="crowd">Crowd detected</option><option value="motion">Motion at night</option><option value="loiter">Loitering</option></select></label>
+          <label>Action<select id="action"><option value="whatsapp">WhatsApp Message</option><option value="call">Phone Call</option></select></label>
+          <label>Recipient Phone<input id="phone" placeholder="+91xxxxxxxxxx" required /></label>
+          <div class="demo-buttons">
+            <button class="btn primary" type="submit">Simulate</button>
+            <button id="clearBtn" type="button" class="btn ghost">Clear</button>
+          </div>
+          <div id="result" class="result" aria-live="polite"></div>
+        </form>
+      </div>
+      <div class="card">
+        <h4>How alerts look</h4>
+        <p class="note">Each alert contains a snapshot, timestamp, and suggested action. You can escalate to calls if the first recipient doesn't respond.</p>
+        <img src="https://via.placeholder.com/360x180?text=Alert+Preview" alt="alert preview" class="alert-preview" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="wrap">
+    <div class="card">
+      <h3>Talk to us — Book a demo</h3>
+      <p class="note">Tell us about your setup and we'll help you pilot Ocliq in days.</p>
+      <form id="contactForm">
+        <input id="name" placeholder="Your name" />
+        <input id="company" placeholder="Company" />
+        <input id="email" placeholder="Email" />
+        <input id="phoneContact" placeholder="Phone" />
+        <textarea id="notes" placeholder="Tell us briefly about your use case" rows="2"></textarea>
+        <div class="demo-buttons">
+          <button class="btn primary" id="contactSubmit" type="button">Request Demo</button>
+          <div class="note">We reply within 1 business day.</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>© <strong>Ocliq</strong> — When Cameras Start Understanding.</div>
+      <div class="note">Made with ❤️ • Privacy-first • Works on NVRs & Edge</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
