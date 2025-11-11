@@ -3,17 +3,80 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ocliq — Coming Soon</title>
+  <title>Ocliq — When Cameras Start Understanding.</title>
+  <meta name="description" content="Ocliq — Camera AI that understands your world and sends WhatsApp or Call alerts when it matters." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <div class="content">
-      <h1 class="logo">Ocliq</h1>
-      <h2 class="tagline">When Cameras Start Understanding.</h2>
-      <p class="status">We’re working on something intelligent.</p>
-      <div class="coming-soon">Coming Soon</div>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Ocliq</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact" class="btn">Get Access</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>When Cameras Start <span class="gradient">Understanding.</span></h1>
+      <p>AI that sees what matters — Ocliq connects your cameras to WhatsApp and calls, alerting you instantly when action is needed.</p>
+      <div class="actions">
+        <a href="#contact" class="btn primary">Join Early Access</a>
+        <a href="#about" class="btn ghost">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Turn Vision into Action</h2>
+      <p>Ocliq transforms traditional CCTV footage into intelligent workflows. Detect staff inactivity, theft, unusual motion, or operational bottlenecks — and instantly act through automated WhatsApp alerts or phone calls.</p>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Built for Businesses that Watch</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Restaurants</h3>
+          <p>Monitor idle counters, delayed orders, or staff absence in real-time.</p>
+        </div>
+        <div class="card">
+          <h3>Retail</h3>
+          <p>Prevent theft, detect empty billing counters, and monitor queues automatically.</p>
+        </div>
+        <div class="card">
+          <h3>Schools</h3>
+          <p>Ensure student safety and monitor restricted zones with AI vision.</p>
+        </div>
+        <div class="card">
+          <h3>Homes</h3>
+          <p>Get instant WhatsApp or call alerts for unusual movements or intrusions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get Early Access</h2>
+      <p>Ocliq is in private beta. Drop your email below, and we’ll reach out soon.</p>
+      <form id="contactForm">
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <button type="submit" class="btn primary">Notify Me</button>
+      </form>
+      <p id="thanks" class="thanks-message"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ocliq. When Cameras Start Understanding.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
